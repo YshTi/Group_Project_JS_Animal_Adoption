@@ -1,4 +1,4 @@
-// 1. Дані Рекса для тесту
+// Тимчасові дані для тесту
 const mockPet = {
   _id: "667ad1b8e4b01a2b3c4d5e01",
   name: "Рекс",
@@ -12,14 +12,14 @@ const mockPet = {
 };
 
 const refs = {
-    testBtn: document.querySelector('#modal'), // Ваша тимчасова кнопка
+    testBtn: document.querySelector('#modal'), // Тимчасова кнопка
     
   backdrop: document.querySelector('#animal-modal-backdrop'),
   modalContent: document.querySelector('#modal-content'),
   closeBtn: document.querySelector('#modal-close'),
 };
 
-function createModalMarkup(pet) {
+export function createModalMarkup(pet) {
   return `
         <img src="${pet.image}" alt="${pet.name}" class="animal-img" />
         <div class="animal-info-wrapper"> 

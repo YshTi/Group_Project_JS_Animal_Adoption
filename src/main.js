@@ -1,0 +1,1 @@
+import { createModalMarkup } from './animal_detail.js'; 
