@@ -1,5 +1,5 @@
 :root {
-  font-family: "IBM Plex Sans", "Open Sans", sans-serif;
+  font-family: 'IBM Plex Sans', 'Open Sans', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -26,4 +26,9 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
