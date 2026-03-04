@@ -19,5 +19,16 @@
   "dependencies": {
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
-  }
+  },
+  "description": "[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)\r (_This project was created by a group of students during the JavaScript learning\r program at the GoIT course._)",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YshTi/Group_Project_JS.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/YshTi/Group_Project_JS/issues"
+  },
+  "homepage": "https://github.com/YshTi/Group_Project_JS#readme"
 }
