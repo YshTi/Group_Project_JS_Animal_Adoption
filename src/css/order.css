@@ -17,10 +17,9 @@
   padding: 64px 20px 64px;
   width: 100%;
   max-width: 335px;
+  height: 763px;
   border-radius: 8px;
   background-color: #f6f4f1;
-  min-height: auto;
-  overflow-y: auto;
 }
 
 .modalCloseButton {
@@ -37,7 +36,6 @@
   background: transparent;
   cursor: pointer;
 }
-
 .buttonIcon {
   width: 24px;
   height: 24px;
@@ -153,8 +151,8 @@
 @media (min-width: 768px) {
   .modal {
     padding: 64px 32px 64px;
-    width: 90%;
     max-width: 704px;
+    height: 677px;
   }
 
   .formButton {
@@ -166,8 +164,11 @@
 @media (min-width: 1440px) {
   .modal {
     padding: 64px 64px 64px;
-    width: 60%;
+    height: 768px;
     max-width: 768px;
+  }
+
+  .modalTitle {
     font-size: 48px;
   }
 
