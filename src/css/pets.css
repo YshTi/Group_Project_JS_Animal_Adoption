@@ -1,0 +1,216 @@
+.our-pets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.our-pets-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 36px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.our-pets-additional-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.our-pets-categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.category-btn {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 100px;
+  padding: 10px 16px;
+  border: 0px;
+  background-color: inherit;
+}
+.category-btn:hover,
+.category-btn:focus {
+  background: #eee9e3;
+}
+
+.active {
+  font-weight: 500;
+  background: #eee9e3;
+}
+.our-pets-list {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.our-pets-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 335px;
+  background: #eee9e3;
+  border-radius: 16px;
+  padding: 12px;
+}
+.pets-img {
+  border-radius: 8px;
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+.pets-species {
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+.pets-name {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.pets-categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 50px;
+  margin-bottom: 4px;
+}
+.pets-category p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.5;
+  border-radius: 100px;
+  padding: 4px 10px;
+  background: rgba(2, 6, 10, 0.05);
+}
+.pets-personal {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.pets-personal-item {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.pets-short-description {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.pets-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  padding: 8px 20px;
+  border: 1px solid #02060a;
+  background-color: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: auto;
+}
+.pets-btn:hover,
+.pets-btn:focus {
+  background: #c3b49d;
+}
+.pets-btn:active {
+  box-shadow:
+    inset 0 4px 6px -2px rgba(0, 0, 0, 0.03),
+    inset 0 12px 16px -4px rgba(0, 0, 0, 0.08);
+  background: #c3b49d;
+}
+.our-pets-pagination-btn {
+  display: block;
+  border: 1px solid #88765c;
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: 335px;
+  height: 45px;
+  background: #88765c;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0 auto;
+}
+.our-pets-pagination-btn:hover,
+.our-pets-pagination-btn:focus {
+  background: #eee9e3;
+}
+@media screen and (min-width: 768px) {
+  .our-pets-categories {
+    max-width: 579px;
+  }
+  .our-pets-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .our-pets-item {
+    max-width: calc((100% - 32px) / 2);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .our-pets-title {
+    font-size: 48px;
+  }
+  .our-pets-additional-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .our-pets-categories {
+    max-width: 1280px;
+    margin-bottom: 40px;
+  }
+  .category-btn {
+    font-size: 16px;
+  }
+  .our-pets-item {
+    max-width: calc((100% - 64px) / 3);
+  }
+  .pets-img {
+    height: 309px;
+  }
+  .pets-species {
+    font-size: 12px;
+  }
+  .pets-name {
+    font-size: 24px;
+  }
+  .pets-categories {
+    min-height: 68px;
+  }
+  .pets-categories p {
+    font-size: 12px;
+  }
+  .pets-personal-item {
+    font-size: 12px;
+  }
+  .pets-short-description {
+    font-size: 14px;
+  }
+  .our-pets-pagination-btn {
+    width: 192px;
+    font-size: 16px;
+    height: 48px;
+  }
+}
