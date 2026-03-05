@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2';
+/*import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import createOrder from './api';
 
@@ -57,3 +57,4 @@ form.addEventListener('submit', async e => {
     });
   }
 });
+*/

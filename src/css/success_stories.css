@@ -116,3 +116,11 @@
   line-height: 1.5;
   color: #02060a;
 }
+
+.raty-stars i {
+  font-size: 20px;
+}
+
+.raty-stars {
+  margin-bottom: 32px;
+}
