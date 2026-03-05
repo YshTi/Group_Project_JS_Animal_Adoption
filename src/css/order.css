@@ -17,10 +17,13 @@
   padding: 64px 20px 64px;
   width: 100%;
   max-width: 335px;
+  max-height: 90vh;
+  height: 763px;
   border-radius: 8px;
   background-color: #f6f4f1;
-  min-height: auto;
+
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modalCloseButton {
@@ -37,7 +40,6 @@
   background: transparent;
   cursor: pointer;
 }
-
 .buttonIcon {
   width: 24px;
   height: 24px;
@@ -104,10 +106,11 @@
   height: 45px;
   border: 1px solid transparent;
   border-radius: 8px;
-  background-color: #88765c;
-  color: #ffffff;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 14px;
   font-weight: 400;
+  background-color: #88765c;
+  color: #ffffff;
 }
 
 .formButton:focus,
@@ -150,11 +153,16 @@
   display: block;
 }
 
+.isHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 @media (min-width: 768px) {
   .modal {
     padding: 64px 32px 64px;
-    width: 90%;
     max-width: 704px;
+    height: 677px;
   }
 
   .formButton {
@@ -166,8 +174,11 @@
 @media (min-width: 1440px) {
   .modal {
     padding: 64px 64px 64px;
-    width: 60%;
+    height: 768px;
     max-width: 768px;
+  }
+
+  .modalTitle {
     font-size: 48px;
   }
 
