@@ -3,7 +3,7 @@
     font-family: "IBM Plex Sans", sans-serif;
     color: #02060a;
 
-    padding: 40px 20px 20px;
+    padding: 48px 20px;
     display: flex;
     justify-content: center;
 }
@@ -27,7 +27,6 @@
     text-decoration: none;
     transition: transform 0.3s ease;
 }
-
 
 .footer__logo {
     width: 100%;
@@ -82,7 +81,7 @@
     display: flex;
     flex-direction: row;
     gap: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .footer__social-link {
@@ -105,13 +104,11 @@
     color: #88765c;
 }
 
-
-
 /* --- COPY RIGHT --- */
 .footer__copyright {
     width: 100%;
     border-top: 1px solid rgba(2, 6, 10, 0.15);
-    padding-top: 24px;
+    padding-top: 32px;
     text-align: center;
 }
 
@@ -124,10 +121,14 @@
 }
 
 /* =========================================
-   DESKTOP (from 768px and 1440px)
+   TABLET (from 768px)
 ========================================= */
 
 @media (min-width: 768px) {
+    .footer {
+        padding: 48px 32px;
+    }
+
     .footer__nav-list {
         flex-direction: row;
         justify-content: center;
@@ -135,12 +136,12 @@
     }
 }
 
+/* =========================================
+   DESKTOP (from 1440px)
+========================================= */
+
 @media (min-width: 1440px) {
     .footer {
-        padding: 64px 20px 64px;
-    }
-
-    .footer__socials {
-        margin-bottom: 80px;
+        padding: 64px;
     }
 }
