@@ -4,7 +4,7 @@ const BASE_URL = 'https://paw-hut.b.goit.study/api/feedbacks';
 
 export async function getFeedback(page = 1) {
   const params = {
-    limit: 3,
+    limit: 4,
     page: page,
   };
   try {
