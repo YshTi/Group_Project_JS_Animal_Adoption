@@ -2,9 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+
+    <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="/favicon-dark.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="/favicon-light.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Animal Adoption</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -23,9 +36,10 @@
 
     <load src="./partials/footer.html" />
     <load src="./partials/mobile-menu.html" />
-    <load src="./partials/order.html" />
+    <!-- <load src="./partials/order.html" /> -->
     <load src="./partials/animal_detail.html" />
 
+    <script type="module" src="./js/modal-function.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
