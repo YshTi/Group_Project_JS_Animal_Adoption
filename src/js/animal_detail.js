@@ -1,3 +1,4 @@
+import { openModalForm } from './modal-function.js';
 
 const refs = {
   backdrop: document.querySelector('#animal-modal-backdrop'),
@@ -6,7 +7,8 @@ const refs = {
 };
 
 export function createModalMarkup(pet) {
-  const categories = pet.categories?.map(cat => cat.name).join(', ') || 'Тваринка';
+  const categories =
+    pet.categories?.map(cat => cat.name).join(', ') || 'Тваринка';
 
   return `
     <img src="${pet.image}" alt="${pet.name}" class="animal-img" />
@@ -39,7 +41,6 @@ export function createModalMarkup(pet) {
   `;
 }
 
-
 //  Відкриває модальне вікно
 
 export function openModal(pet) {
@@ -48,13 +49,20 @@ export function openModal(pet) {
   refs.modalContent.innerHTML = createModalMarkup(pet);
   refs.backdrop.classList.remove('is-hidden');
   document.body.classList.add('modal-open'); // Блокуємо скрол фону
-  
+
+  const btnOpenForm = document.getElementById('btn-open-form');
+  if (btnOpenForm) {
+    btnOpenForm.addEventListener('click', () => {
+      openModalForm();
+      closeModal();
+    });
+  }
+
   window.addEventListener('keydown', onEscPress);
 }
 
-
 //  Закриває модальне вікно
- 
+
 export function closeModal() {
   refs.backdrop.classList.add('is-hidden');
   document.body.classList.remove('modal-open');
@@ -69,6 +77,6 @@ function onEscPress(e) {
 // Слухачі подій для закриття
 refs.closeBtn?.addEventListener('click', closeModal);
 
-refs.backdrop?.addEventListener('click', (e) => {
+refs.backdrop?.addEventListener('click', e => {
   if (e.target === refs.backdrop) closeModal();
 });

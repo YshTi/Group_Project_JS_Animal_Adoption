@@ -157,7 +157,7 @@
   overflow: hidden;
 }
 
-.isHidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
 }
