@@ -12,7 +12,7 @@ import{a as p,i as O,A as x,R as B,S as P,N as S,P as E,b as H}from"./assets/ven
         <ul class="animal-traits-list-2">
             <li class="trait-item">
                 <h3 class="trait-title">Опис:</h3>
-                <p class="trait-text">${e.shortDescription||"Опис скоро з’явиться"}</p>
+                <p class="trait-text">${e.longDescription||"Опис скоро з’явиться"}</p>
             </li>
             <li class="trait-item">
                 <h3 class="trait-title">Здоров’я:</h3>
