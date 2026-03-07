@@ -38,7 +38,6 @@ export function openModalForm(animalId) {
           icon: 'success',
           title: 'Успіх!',
           text: 'Ваша заявка відправлена.',
-          confirmButtonColor: "#88765c"
         });
 
         closeFormModal();
