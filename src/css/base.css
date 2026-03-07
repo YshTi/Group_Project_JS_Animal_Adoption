@@ -12,6 +12,19 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+/*
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #111;
+  color: #fff;
+}
+*/
+
 
 *,
 ::after,
@@ -27,11 +40,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
-
 
 body {
   display: flex;
@@ -48,4 +60,8 @@ main {
 
 main:has(.back-link) {
   text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -1,0 +1,285 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+body.modal-open {
+    overflow: hidden;
+}
+.modal-container {
+    box-sizing: border-box;
+    position: relative;
+    background-color: #f6f4f1;
+    border-radius: 8px;
+    min-width: 335px;
+    max-width: 335px;
+    max-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 20px;
+}
+.modal-container {
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal-container {
+    transform: scale(0.9);
+}
+@media screen and (min-width: 768px) {
+    .modal-container {
+        max-width: 704px;
+        max-height: 685px;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .modal-container {
+        max-width: 1312px;
+        max-height: 650px;
+        padding: 64px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal-content {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 24px;
+        padding: 0;
+        background-color: #f6f4f1;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .modal-content {
+        gap: 32px;
+    }
+}
+
+.animal-img {
+    width: 295px;
+    height: 295px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+    .animal-img {
+        width: 304px;
+        height: 450px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border-radius: 15px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .animal-img {
+        width: 567px;
+        height: 450px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border-radius: 8px;
+        
+        
+    }
+}
+.animal-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 295px;
+    gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .animal-info-wrapper {
+        width: 304px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .animal-info-wrapper {
+        width: 576px;
+        gap: 24px;
+    }
+}
+.animal-traits-list-1, .animal-traits-list-2 {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.animal-traits-list-1{
+    order: 1;
+}
+.animal-traits-list-2 {
+    order: 2;
+}
+@media screen and (min-width: 768px) {
+    .animal-traits-list-2 {
+        order: 3;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .animal-traits-list-2 {
+        order: 2;
+    }
+}
+
+.animal-species,
+.animal-meta {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #02060a;
+}
+@media screen and (min-width: 1440px) {
+    .animal-species,
+    .animal-meta {
+        font-size: 14px;
+    }
+}
+.meta-key{
+    margin-right: 16px;
+}
+
+.animal-name {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: #02060a;
+    margin-top: -16px;
+    margin-bottom: -16px;
+}
+@media screen and (min-width: 1440px) {
+    .animal-name {
+        font-size: 40px;
+    }
+}
+.trait-title{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: #02060a;
+    padding-bottom: 8px;
+}
+@media screen and (min-width: 1440px) {
+    .trait-title {
+        font-size: 16px;
+        ;
+    }
+}
+
+.trait-text{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #02060a;
+}
+@media screen and (min-width: 1440px) {
+    .trait-text {
+        font-size: 16px;
+        ;
+    }
+}
+
+.modal-close-btn {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    line-height: 0;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    transition: transform 200ms ease, color 200ms ease;
+    border: none;
+    fill: currentColor;
+    background-color: #f6f4f1;
+}
+
+.modal-close-btn:hover {
+    transform: rotate(90deg);
+    color: #ff6b08
+}
+
+.btn-adopt {
+    order: 3;
+    cursor: pointer;
+    width: 295px;
+    height: 45px;
+    margin-top: 8px;
+    font-family: "IBM Plex Sans",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+    background-color: #88765c;
+    text-transform: uppercase;
+    border: 1px solid #88765c;
+    border-radius: 8px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+}
+.btn-adopt:hover,
+.btn-adopt:focus {
+    border: 1px solid #4d5053;
+    background-color: #c3b49d;
+    color: #02060a;
+}
+
+@media screen and (min-width: 768px) {
+    .btn-adopt {
+        order: 2;
+        width: 304px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .btn-adopt {
+        order: 3;
+        width: 576px;
+        height: 48px;
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+
+.modal-btn{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    font-size: 1px;
+    color: #fff;
+    background-color: #05fa57;
+    border-radius: 50%; 
+}
