@@ -146,7 +146,7 @@
   border: 1px solid #88765c;
   border-radius: 8px;
   padding: 12px 24px;
-  width: 335px;
+  width: 100%;
   height: 45px;
   background: #88765c;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -184,6 +184,9 @@
   .our-pets-item {
     max-width: none;
     width: calc((100% - 32px) / 2);
+  }
+  .our-pets-pagination-btn {
+    width: 335px;
   }
 }
 @media screen and (min-width: 1440px) {

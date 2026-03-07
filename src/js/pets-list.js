@@ -28,13 +28,13 @@ function renderCategories(categories) {
   let markup = categories
     .map(
       category => `<li class="our-pets-category-item">
-      <button class="category-btn" data-id="${category._id}" type="button">${category.name}</button>
+      <button class="category-btn" data-id="${category._id}" aria-label="${category.name}" type="button">${category.name}</button>
       </li>`
     )
     .join('');
   CATEGORIES.innerHTML =
     `<li class="our-pets-category-item">
-        <button class="category-btn active" data-id="all" type="button">
+        <button class="category-btn active" data-id="all" aria-label="Всі" type="button">
           Всі
         </button>
       </li>` + markup;
@@ -106,7 +106,7 @@ function renderAnimals(animals) {
         <p class="pets-short-description">
           ${pet.shortDescription}
         </p>
-        <button class="pets-btn" type="button" data-id="${pet._id}">Дізнатись більше</button>
+        <button class="pets-btn" type="button" data-id="${pet._id}" aria-label="Дізнатись більше про ${pet.name}">Дізнатись більше</button>
       </li>`;
     })
     .join('');
