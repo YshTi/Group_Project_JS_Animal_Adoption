@@ -1,6 +1,15 @@
 /* =========================
    FAQ Title
 ========================= */
+#faq .faq-accordion .ac,
+#faq .faq-accordion .ac-header,
+#faq .faq-accordion .ac-trigger,
+#faq .faq-accordion .ac-panel,
+#faq .faq-accordion .ac-content {
+  margin: 0;
+  padding: 0;
+} /* видалили стандартні відступи бібліотеки */
+
 #faq .faq-title {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
@@ -40,9 +49,10 @@
 
 #faq .faq-accordion .ac-header span {
   flex: 1;
-  font-size: 16px;
   font-weight: 700;
+  font-size: 16px;
   line-height: 150%;
+  letter-spacing: 0.01em;
 }
 
 /* =========================
@@ -87,11 +97,13 @@
 #faq .faq-accordion .ac-content {
   padding: 0 24px 24px;
   font-size: 14px;
-  line-height: 1.49;
+  line-height: 1.5;
+  /* letter-spacing: -0.01em; */
 }
 
 #faq .faq-accordion .ac-content p:not(:last-child) {
   margin-bottom: 16px;
+  /* 16px */
 }
 
 /* =========================
@@ -99,7 +111,7 @@
 ========================= */
 #faq .faq-accordion .accordion-list,
 #faq .faq-accordion .accordion-bullets {
-  padding-left: 12px;
+  padding-left: 22px;
   margin-bottom: 12px;
 }
 
@@ -109,7 +121,10 @@
 
 #faq .faq-accordion ul li:not(:last-child),
 #faq .faq-accordion ol li:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+.mobile-br {
+  display: block;
 }
 
 /* =========================
@@ -121,19 +136,25 @@
     max-width: 864px;
     padding: 0 32px;
   } */
+  .mobile-br {
+    display: none;
+  }
 
   #faq .faq-title {
     font-size: 36px;
   }
 
   #faq .faq-accordion .ac-trigger {
-    padding: 20px 28px;
+    padding: 20px 24px;
     font-size: 16px;
+    gap: 0;
   }
 
   #faq .faq-accordion .ac-content {
     padding: 0 24px 24px;
     font-size: 14px;
+  }
+  .ac-header {
   }
 }
 
@@ -143,6 +164,10 @@
     max-width: 1024px;
     padding: 0 32px;
   } */
+  .title-wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+  }
 
   #faq .faq-title {
     font-size: 48px;
@@ -151,5 +176,9 @@
   #faq .faq-accordion .ac-trigger {
     padding: 24px 32px;
     font-size: 18px;
+  }
+  #faq .faq-accordion {
+    max-width: 864px;
+    margin: 0 auto;
   }
 }
