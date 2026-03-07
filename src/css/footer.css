@@ -124,18 +124,23 @@
 .footer__cat-decor {
     position: absolute;
     left: 10%;
-    bottom: 45px;
-    width: 130px;
+    bottom: 50px;
+    width: clamp(60px, 20vw, 130px);
     opacity: 0;
     pointer-events: none;
     z-index: 1;
     transform: translateY(20px) scale(0.95);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 320px) {
     .footer__cat-decor {
-        width: clamp(60px, 20vw, 130px);
         bottom: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer__cat-decor {
+        bottom: 45px;
     }
 }
 
