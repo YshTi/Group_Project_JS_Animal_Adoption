@@ -84,24 +84,17 @@ async function loadAnimals(loadMore = false) {
   }
 }
 
-
-
-ANIMAL_LIST.addEventListener('click', (event) => {
+ANIMAL_LIST.addEventListener('click', event => {
   const btn = event.target.closest('.pets-btn');
   if (!btn) return;
 
   const petId = btn.dataset.id;
   const petData = getPetByID(petId);
-  
+
   if (petData) {
     openModal(petData);
   }
 });
-
-
-
-
-
 
 function renderAnimals(animals) {
   let markup = animals
@@ -154,18 +147,18 @@ async function loadPage() {
   }
 }
 function hidePageButton() {
-  PAGE_BUTTON.classList.add('IsHidden');
+  PAGE_BUTTON.classList.add('is-hidden');
 }
 function showPageButton() {
-  PAGE_BUTTON.classList.remove('IsHidden');
+  PAGE_BUTTON.classList.remove('is-hidden');
 }
 // LOADER
 const LOADER = document.querySelector('.loader');
 function hideLoader() {
-  LOADER.classList.add('IsHidden');
+  LOADER.classList.add('is-hidden');
 }
 function showLoader() {
-  LOADER.classList.remove('IsHidden');
+  LOADER.classList.remove('is-hidden');
 }
 
 async function initPets() {
