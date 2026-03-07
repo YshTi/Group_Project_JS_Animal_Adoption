@@ -1,37 +1,82 @@
 import { getFeedback } from './comments_service';
 import Raty from 'raty-js';
 import 'raty-js/src/raty.css';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
 
-const textElement = document.querySelector('.textFedbacks');
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
-export function render(page = 1) {
-  getFeedback(page)
-    .then(data => {
-      const markup = data.feedbacks
-        .map(({ author, rate, description }) => {
-          return `
-          <li class="feedbacks-content">
-              <div class="raty-stars" data-score="${rate}"></div>
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-              <div class="feedback-description">${description}</div>
-              <div class="feedback-author">${author}</div>
-          </li>`;
-        })
-        .join('');
+const feedbackContainer = document.querySelector('.textFedbacks');
 
-      textElement.innerHTML = markup;
+export async function render(page = 1) {
+  try {
+    const data = await getFeedback(page);
 
-      document.querySelectorAll('.raty-stars').forEach(el => {
-        const score = el.dataset.score;
-        new Raty(el, {
-          starType: 'i',
-          score: score,
-          readOnly: true,
-          halfShow: true,
-        }).init();
-      });
-    })
-    .catch(err => console.error(err));
+    const markup = data.feedbacks
+      .map(
+        ({ author, rate, description }) => `
+        <li class="swiper-slide">
+          <div class="feedbacks-content">
+
+            <div class="raty-stars" data-score="${rate}"></div>
+
+            <p class="feedback-description">
+              ${description}
+            </p>
+
+            <p class="feedback-author">
+              ${author}
+            </p>
+
+          </div>
+        </li>
+      `
+      )
+      .join('');
+
+    feedbackContainer.innerHTML = markup;
+
+    /* stars */
+
+    document.querySelectorAll('.raty-stars').forEach(el => {
+      const score = el.dataset.score;
+
+      new Raty(el, {
+        starType: 'i',
+        score: score,
+        readOnly: true,
+        halfShow: true,
+      }).init();
+    });
+
+    /* swiper */
+
+    new Swiper('.stories-swiper', {
+      modules: [Navigation, Pagination],
+
+      slidesPerView: 1,
+      spaceBetween: 32,
+
+      navigation: {
+        nextEl: '.stories-next',
+        prevEl: '.stories-prev',
+      },
+
+      pagination: {
+        el: '.stories-pagination',
+        clickable: true,
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }

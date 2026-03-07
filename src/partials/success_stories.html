@@ -1,20 +1,35 @@
-<div class="container">
-  <h2 class="stories-title">Щасливі історії, що надихають</h2>
-  <h3 class="stories-subtitle">
-    Ці хвостики вже знайшли свій дім. Ваш майбутній друг теж чекає на вас
-  </h3>
-  <ul class="textFedbacks"></ul>
-  <div class="navi-btn">
-    <button type="button" class="notactive prewiev-btn stories-btn">
-      <svg class="icon-btn" width="24" height="24">
-        <use href="../img/sprite.svg#icon-arrow_back"></use>
-      </svg>
-    </button>
-    <button type="button" class="notactive next-btn stories-btn">
-      <svg class="icon-btn" width="24" height="24">
-        <use href="../img/sprite.svg#icon-arrow_forward"></use>
-      </svg></use>
-      </svg>
-    </button>
+<section class="success-stories" id="success-stories">
+  <div class="container">
+    <h2 class="stories-title">Щасливі історії, що надихають</h2>
+
+    <p class="stories-subtitle">
+      Ці хвостики вже знайшли свій дім. Ваш майбутній друг теж чекає на вас
+    </p>
+
+    <!-- slider -->
+    <div class="swiper stories-swiper">
+      <ul class="swiper-wrapper textFedbacks"></ul>
+    </div>
+
+    <!-- controls -->
+    <div class="stories-controls">
+      <!-- pagination LEFT -->
+      <div class="stories-pagination"></div>
+
+      <!-- buttons RIGHT -->
+      <div class="navi-btn">
+        <button type="button" class="stories-btn stories-prev">
+          <svg width="24" height="24">
+            <use href="./img/sprite.svg#icon-arrow_back"></use>
+          </svg>
+        </button>
+
+        <button type="button" class="stories-btn stories-next">
+          <svg width="24" height="24">
+            <use href="./img/sprite.svg#icon-arrow_forward"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
-</div>
+</section>
