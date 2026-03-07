@@ -14,7 +14,7 @@ export function openModalForm(animalId) {
   form.dataset.animalId = animalId;
 
   backdrop.classList.remove('is-hidden');
-  document.body.classList.add('modal-open');
+  document.body.classList.add('body-no-scroll');
 
   form.addEventListener(
     'submit',
@@ -62,7 +62,7 @@ function closeFormModal() {
   if (form) form.reset();
 
   backdrop.classList.add('is-hidden');
-  document.body.classList.remove('modal-open');
+  document.body.classList.remove('body-no-scroll');
 }
 
 if (modalCloseButton) {
