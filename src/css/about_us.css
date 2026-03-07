@@ -1,0 +1,322 @@
+/* ---------- Mobile ------------ */
+
+.about {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.about__container {
+    position: relative;
+}
+
+.about__title {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    color: #02060a;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    max-width: 335px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about__slider {
+    width: 100%;
+    position: relative;
+    max-width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-swiper {
+    overflow: hidden;
+    position: relative;
+}
+
+.about-slide__media {
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    height: 402px;
+}
+
+.about-slide__media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.63) 0%,
+            rgba(0, 0, 0, 0.18) 100%);
+    pointer-events: none;
+}
+
+.about-slide__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about-slide__img--split {
+    object-position: 97% center;
+}
+
+.about-slide__img--team {
+    object-position: 39% center;
+}
+
+.about-slide__text {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f6f4f1;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    max-width: 295px;
+}
+
+.about__controls {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 335px;
+    height: 64px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about__pagination {
+    width: 60px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about__buttons {
+    width: 251px;
+    min-width: 251px;
+    height: 64px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+.about__nav {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #eee9e3;
+    border: 1px solid #c3b49d;
+    color: #02060a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 200ms ease, box-shadow 200ms ease, opacity 200ms ease;
+}
+
+.about__nav:hover,
+.about__nav:focus-visible {
+    border: 1px solid rgba(2, 6, 10, 0.6);
+    outline: none;
+}
+
+.about__nav:active {
+    border: 1px solid rgba(2, 6, 10, 0.6);
+    box-shadow: inset 0 4px 6px -2px rgba(2, 6, 10, 0.25);
+}
+
+.about__nav:disabled,
+.about__nav.swiper-button-disabled {
+    opacity: 0.4;
+    border: 1px solid #f6f4f1;
+    box-shadow: none;
+    pointer-events: none;
+    cursor: default;
+}
+
+.about__nav-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+}
+
+/* ---------- Pagination ----------- */
+
+.about__pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+    border-radius: 50%;
+    margin: 0 4px 0 0 !important;
+    opacity: 1;
+    background: rgba(2, 6, 10, 0.2);
+    transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.about__pagination .swiper-pagination-bullet:last-child {
+    margin-right: 0 !important;
+}
+
+.about__pagination .swiper-pagination-bullet:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    background: rgba(2, 6, 10, 0.35);
+}
+
+.about__pagination .swiper-pagination-bullet:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 6, 10, 0.12);
+    border-radius: 999px;
+}
+
+.about__pagination .swiper-pagination-bullet-active {
+    background: #02060a;
+}
+
+/* ------------ TABLET ----------- */
+
+@media (min-width: 768px) {
+
+        .about__title {
+            font-size: 36px;
+            margin-bottom: 32px;
+            max-width: 704px;
+            width: 100%; 
+        }
+    .about__slider {
+        max-width: 704px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .about-slide__media {
+        height: 404px;
+    }
+
+    .about-slide__text {
+        left: 32px;
+        right: auto;
+        bottom: 32px;
+        max-width: 548px;
+        font-size: 16px;
+    }
+
+    .about__controls {
+        display: block;
+        max-width: 704px;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+
+    .about__buttons {
+        position: static;
+        width: 0;
+        height: 0;
+        min-width: 0;
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .about__nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+    }
+
+    .about__nav--prev {
+        left: -24px;
+    }
+
+    .about__nav--next {
+        right: -24px;
+    }
+
+    .about__pagination {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ------- DESKTOP (>=1440px) --------- */
+
+@media (min-width: 1440px) {
+    .about {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+
+     .about__title {
+              font-size: 48px;
+              margin-bottom: 40px;
+              max-width: 768px;
+            width: 100%;
+          }
+
+    .about__slider {
+        max-width: 1312px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-slide__media {
+        height: 753px;
+    }
+
+    .about-slide__text {
+        left: 48px;
+        right: auto;
+        bottom: 40px;
+        max-width: 548px;
+        font-size: 16px;
+    }
+
+    .about__controls {
+        max-width: 1312px;
+    }
+
+    .about__nav--prev {
+        left: -24px;
+    }
+
+    .about__nav--next {
+        right: -24px;
+    }
+
+    .about__pagination {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 48px;
+        justify-content: center;
+    }
+}
