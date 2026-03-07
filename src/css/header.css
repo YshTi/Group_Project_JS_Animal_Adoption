@@ -38,6 +38,20 @@ a{
   justify-content: flex-end;
   gap: 40px;
 }
+
+.menu-item:hover, .menu-item:focus {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  color: #02060a;
+}
+
+.menu-item:active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  color: #88765c;
+}
 /* ----BLOCK LOGO AND NAV-LIST---- */
 
 /* BLOCK NAV-BUTTON */
@@ -137,6 +151,20 @@ a{
   opacity: 0;
   visibility: hidden;
 }
+
+  .mobile-menu-item:hover, .mobile-menu-item:focus {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    color: #02060a;
+  }
+
+.mobile-menu-item:active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    color: #88765c;
+  }
 }
 
 @media only screen and (375px <= width <= 768px){
