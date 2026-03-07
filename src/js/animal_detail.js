@@ -22,7 +22,7 @@ export function createModalMarkup(pet) {
         <ul class="animal-traits-list-2">
             <li class="trait-item">
                 <h3 class="trait-title">Опис:</h3>
-                <p class="trait-text">${pet.shortDescription || 'Опис скоро з’явиться'}</p>
+                <p class="trait-text">${pet.longDescription || 'Опис скоро з’явиться'}</p>
             </li>
             <li class="trait-item">
                 <h3 class="trait-title">Здоров’я:</h3>
