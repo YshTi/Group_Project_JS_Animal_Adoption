@@ -233,7 +233,7 @@
 }
 
 .IsHidden {
-  opacity: 0;
-  visible: hidden;
-  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
 }
