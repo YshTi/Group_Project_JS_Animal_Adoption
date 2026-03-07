@@ -36,7 +36,7 @@ export function createModalMarkup(pet) {
             </li>
         </ul>
         
-        <button type="button" class="btn-adopt" id="btn-open-form">Взяти додому</button>
+        <button type="button" class="btn-adopt" data-animal-id="${pet._id || ''}"" >Взяти додому</button>
     </div>
   `;
 }
@@ -50,10 +50,11 @@ export function openModal(pet) {
   refs.backdrop.classList.remove('is-hidden');
   document.body.classList.add('modal-open'); // Блокуємо скрол фону
 
-  const btnOpenForm = document.getElementById('btn-open-form');
+  const btnOpenForm = refs.modalContent.querySelector('.btn-adopt');
   if (btnOpenForm) {
     btnOpenForm.addEventListener('click', () => {
-      openModalForm();
+      const animalId = btnOpenForm.dataset.animalId;
+      openModalForm(animalId);
       closeModal();
     });
   }
