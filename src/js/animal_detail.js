@@ -7,13 +7,10 @@ const refs = {
 };
 
 export function createModalMarkup(pet) {
-  const categories =
-    pet.categories?.map(cat => cat.name).join(', ') || 'Тваринка';
-
   return `
     <img src="${pet.image}" alt="${pet.name}" class="animal-img" />
     <div class="animal-info-wrapper"> 
-        <p class="animal-species">${categories}</p>
+        <p class="animal-species">${pet.species}</p>
         <h2 class="animal-name">${pet.name}</h2>
         
         <p class="animal-meta">
