@@ -5,3 +5,4 @@ render();
 import './js/modal-function';
 import './about_us.js';
 import './js/cat_decor.js';
+import './js/header.js';
