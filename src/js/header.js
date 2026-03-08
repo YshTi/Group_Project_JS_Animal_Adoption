@@ -1,6 +1,16 @@
 const burgerOpen = document.querySelector('.nav-burgermenu');
 const burgerClose = document.querySelector('.mobile-close-icon');
 const modalMobile = document.querySelector('.mobile-modal');
+const body = document.querySelector('body');
+console.log(body);
+burgerOpen.addEventListener('click', () => {
+modalMobile.classList.add("is-active");
+body.style.overflow = "hidden";
+})
+burgerClose.addEventListener('click', () => {
+modalMobile.classList.remove("is-active");
+body.style.overflow = "auto";
+})
 
 burgerOpen.addEventListener('click', () => {
   modalMobile.classList.add('is-active');
