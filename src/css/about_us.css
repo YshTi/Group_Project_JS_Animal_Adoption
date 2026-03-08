@@ -33,7 +33,6 @@
 
 .about-slide__media {
     position: relative;
-    border-radius: 0;
     overflow: hidden;
     height: 402px;
 }
@@ -156,36 +155,49 @@
 /* ---------- Pagination ----------- */
 
 .about__pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    flex: 0 0 8px;
-    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
     margin: 0 4px 0 0 !important;
+    border-radius: 50%;
     opacity: 1;
-    background: rgba(2, 6, 10, 0.2);
-    transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
 .about__pagination .swiper-pagination-bullet:last-child {
     margin-right: 0 !important;
 }
 
-.about__pagination .swiper-pagination-bullet:hover {
-    cursor: pointer;
-    transform: scale(1.15);
+.about__pagination .swiper-pagination-bullet::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(2, 6, 10, 0.2);
+    transition: transform 200ms ease, background-color 200ms ease;
+}
+
+.about__pagination .swiper-pagination-bullet:hover::after {
+    transform: translate(-50%, -50%) scale(1.15);
     background: rgba(2, 6, 10, 0.35);
 }
 
 .about__pagination .swiper-pagination-bullet:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(2, 6, 10, 0.12);
-    border-radius: 999px;
+    outline: 2px solid rgba(2, 6, 10, 0.45);
+    outline-offset: 2px;
 }
 
-.about__pagination .swiper-pagination-bullet-active {
+.about__pagination .swiper-pagination-bullet-active::after {
     background: #02060a;
 }
-
 /* ------------ TABLET ----------- */
 
 @media (min-width: 768px) {
