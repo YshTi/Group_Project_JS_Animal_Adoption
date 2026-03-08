@@ -1,5 +1,5 @@
-import hero1x from './img/hero/hero@1x.webp';
-import hero2x from './img/hero/hero@2x.webp';
+import hero1x from '../img/hero/hero@1x.webp';
+import hero2x from '../img/hero/hero@2x.webp';
 
 function preloadHeroImages() {
   const preload = document.createElement('link');
