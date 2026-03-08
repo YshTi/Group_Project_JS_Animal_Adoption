@@ -156,7 +156,7 @@
 
 .about__pagination .swiper-pagination-bullet {
     width: 16px;
-    height: 16px;
+    height: 24px;
     flex: 0 0 16px;
     margin: 0 4px 0 0 !important;
     border-radius: 50%;
