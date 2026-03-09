@@ -87,12 +87,12 @@ document.addEventListener('keydown', e => {
     closeFormModal();
 });
 
-const formLoader = document.querySelector('#form-backdrop .loader');
+const loaderOverlay = document.querySelector('#form-backdrop .loaderOverlay');
 
 function showFormLoader() {
-  formLoader.classList.remove('is-hidden');
+  loaderOverlay.classList.remove('is-hidden');
 }
 
 function hideFormLoader() {
-  formLoader.classList.add('is-hidden');
+  loaderOverlay.classList.add('is-hidden');
 }
