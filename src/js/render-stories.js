@@ -1,4 +1,4 @@
-import { getFeedback } from './comments_service';
+import { getFeedback } from './comments-service';
 import Raty from 'raty-js';
 import 'raty-js/src/raty.css';
 

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Group_Project_JS/",
+    "build": "vite build --base=/Group_Project_JS_Animal_Adoption/",
     "preview": "vite preview"
   },
   "devDependencies": {

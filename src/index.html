@@ -21,23 +21,22 @@
       name="description"
       content="Animal Adoption is a platform where you can find pets, learn about them, and choose a new furry friend for your home."
     />
-    
+
     <title>Animal Adoption</title>
     <script type="module">
       import hero1x from './img/hero/hero@1x.webp';
       import hero2x from './img/hero/hero@2x.webp';
-    
+
       const preload = document.createElement('link');
       preload.rel = 'preload';
       preload.as = 'image';
       preload.href = hero1x;
       preload.setAttribute('imagesrcset', `${hero1x} 1x, ${hero2x} 2x`);
       preload.setAttribute('fetchpriority', 'high');
-    
+
       document.head.appendChild(preload);
     </script>
     <link rel="stylesheet" href="./css/styles.css" />
-    
   </head>
   <body>
     <load src="./partials/header.html" />
@@ -47,16 +46,16 @@
     <main>
       <!-- Loads the specified .html file -->
       <load src="./partials/hero.html" />
-      <load src="./partials/pets_list.html" />
-      <load src="./partials/about_us.html" />
+      <load src="./partials/pets-list.html" />
+      <load src="./partials/about-us.html" />
       <load src="./partials/FAQ.html" />
-      <load src="./partials/success_stories.html" />
+      <load src="./partials/success-stories.html" />
     </main>
 
     <load src="./partials/footer.html" />
     <load src="./partials/mobile-menu.html" />
     <load src="./partials/order.html" />
-    <load src="./partials/animal_detail.html" />
+    <load src="./partials/animal-detail.html" />
 
     <script type="module" src="./js/modal-function.js"></script>
 

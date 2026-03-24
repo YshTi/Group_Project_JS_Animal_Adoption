@@ -1,6 +1,6 @@
 import { getCategories, searchPets } from './paw-api.js';
 import { messageError } from './messages.js';
-import { openModal } from './animal_detail.js';
+import { openModal } from './animal-detail.js';
 
 export function getPetByID(id) {
   // For modal
