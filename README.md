@@ -33,7 +33,7 @@ welcoming your new pet into your life.
 - JavaScript (ES6+),
 - External libraries:
   - Swiper;
-  - Raty / CSS Star Rating (?);
+  - Raty / CSS Star Rating;
   - Accordion.js;
   - SweetAlert2;
   - basicLightbox.
